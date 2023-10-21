@@ -103,6 +103,8 @@ const PAGE = {
         let styleStr = `
             z-index:${zIndex};
             background:${backgroundColor};
+            background-image:linear-gradient(0deg, transparent 18px, rgba(213, 214, 234, 0.9) 18px, rgba(255, 255, 255, 0.5) 20px, transparent 20px);
+            background-size: 100% 20px;
             top:${randomTop}px;
             left:${randomLeft}px;`;
         cardItem.setAttribute('style', styleStr);
@@ -148,6 +150,8 @@ const PAGE = {
         let styleStr = `
             z-index:${zIndex};
             background:${backgroundColor};
+            background-image:linear-gradient(0deg, transparent 18px, rgba(213, 214, 234, 0.9) 18px, rgba(255, 255, 255, 0.5) 20px, transparent 20px);
+            background-size: 100% 20px;
             top:${randomTop}px;
             left:${randomLeft}px;`;
         cardItem.setAttribute('style', styleStr);
@@ -157,7 +161,7 @@ const PAGE = {
 
     sendCardBtn: function (e) {
         let input = document.getElementById('input');
-        let value = input.value;
+        let value = input.value.trim();
         if (!value) {
             return;
         };
@@ -194,11 +198,14 @@ const PAGE = {
         let styleStr = `
             z-index:${zIndex};
             background:${backgroundColor};
+            background-image:linear-gradient(0deg, transparent 18px, rgba(213, 214, 234, 0.9) 18px, rgba(255, 255, 255, 0.5) 20px, transparent 20px);
+            background-size: 100% 20px;
             top:${randomTop}px;
             left:${randomLeft}px;`;
         cardItem.setAttribute('style', styleStr);
         cardList.appendChild(cardItem);
-        this.value = '';
+        //注意用this.value和input.value的区别：这里如果用this.value指向的是button按钮，而不是input内容
+        input.value = '';
     },
 
 
