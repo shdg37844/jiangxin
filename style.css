@@ -8,6 +8,8 @@ html,
 body {
     min-width: 1920px;
     font-family: FZLTHJW--GB1-0;
+    background-color: #F7F7F7;
+    /* overflow-x: hidden; */
 }
 
 /* header部分---------------------------------------------------------------------- */
@@ -18,11 +20,14 @@ body {
     align-items: center;
     max-width: 1920px;
     margin: 0 auto;
-    background: url(../jiangxin/image/banner-bg.jpg);
+    background: url(image/banner-bg.jpg);
     background-size: 1920px 668px;
     background-repeat: no-repeat;
     background-color: #F7F7F7;
 }
+
+
+
 
 .jk-logo {
     position: absolute;
@@ -48,10 +53,88 @@ body {
 }
 
 .page-mainer {
+    position: relative;
     max-width: 1000px;
     margin: 0 auto;
     border: 6px solid #E2E2E2;
 }
+
+.side-bar {
+    position: absolute;
+    top: 261px;
+    right: -76px;
+}
+
+.side-pic {
+    font-size: 0;
+}
+
+.side-list {
+    position: absolute;
+    right: -27px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 28px;
+    padding-bottom: 23px;
+    width: 80px;
+    height: 317px;
+    background: #FFFFFF;
+    border: 1px solid #E2E2E2;
+}
+
+.side-item {
+    font-size: 14px;
+    color: #000000;
+    line-height: 16px;
+    letter-spacing: -0.3px;
+    text-align: center;
+}
+
+.side-item.w55 {
+    width: 55px;
+}
+
+.margin20 {
+    margin-bottom: 20px;
+}
+
+.margin24 {
+    margin: 24px 0;
+}
+
+.side-item.w42 {
+    width: 42px;
+}
+
+.side-item.red {
+    color: #CF000D;
+}
+
+.line {
+    position: relative;
+    width: 78px;
+    height: 1px;
+}
+
+.line::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 1px;
+    background: #E2E2E2;
+}
+
+.side-after-pic {
+    position: absolute;
+    bottom: -7px;
+    font-size: 0;
+}
+
+
+
 
 .mainer-top {
     position: relative;
@@ -252,7 +335,13 @@ body {
 .prize {
     position: relative;
     background-color: #fff;
+}
 
+.banner-mountain {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    font-size: 0;
 }
 
 .prize-box {
@@ -306,15 +395,15 @@ body {
 }
 
 .prize-text-3-rule {
-    width:60px;
-    
+    width: 60px;
+
 }
 
 .prize-text-3-text {
     display: flex;
     flex-direction: column;
-    gap:10px;
-    width:265px;
+    gap: 10px;
+    width: 265px;
     line-height: 14px;
 }
 
@@ -339,6 +428,7 @@ body {
 }
 
 .sendbless {
+    position: relative;
     display: flex;
     align-items: start;
     margin-top: 26px;
@@ -349,9 +439,23 @@ body {
 .sendbless-input {
     width: 650px;
     height: 86px;
+    padding: 11px;
     background: rgba(101, 177, 217, 0);
     border: 1px solid #DBDBDB;
     outline: none;
+
+}
+
+.textarea-1 {
+    position: absolute;
+    top:0px;
+    left:0px;
+}
+
+.textarea-2 {
+    position: absolute;
+    bottom: 0px;
+    right: 240px;
 }
 
 .sendbless-input::placeholder {
@@ -363,6 +467,7 @@ body {
 .sendbless-btn {
     padding: 23px 44px;
     border: 1px solid #DBDBDB;
+    background: linear-gradient(0deg, #EBEBEB, #FAFAFA);
 }
 
 .sendbless-btn span {
@@ -396,6 +501,20 @@ body {
     height: 158px;
     padding: 20px 17px;
     background: #F0F5FF;
+    box-shadow: 0px 1px 3px 0px rgba(0, 0, 0, 0.05);
+    border: 1px solid rgba(213, 214, 234, 0.9);
+}
+
+.message-bg-left {
+    position: absolute;
+    top: -20px;
+    left: -10px;
+}
+
+.message-bg-right {
+    position: absolute;
+    top: -15px;
+    right: -20px;
 }
 
 .close-icon {
@@ -420,6 +539,8 @@ body {
 .card-item-text {
     font-size: 14px;
     line-height: 22.5px;
+    word-wrap: break-word;
+    word-break: break-all;
 }
 
 

@@ -45,9 +45,12 @@ const PAGE = {
         window.addEventListener('mousemove', this.handleMouseMove);
         window.addEventListener('mouseup', this.handleMouseUp);
         this.onEventLister(cardList, 'click', 'close-icon', this.removeCard);
+        let input = document.getElementById('input');
+        input.addEventListener('keyup', this.sendCard);
+        let sendBtn = document.getElementById('sendBtn');
+        sendBtn.addEventListener('click', this.sendCardBtn);
     },
 
- 
     onEventLister: function (parentNode, action, childClassName, callback) {
         parentNode.addEventListener(action, function (e) {
             let elementCheck = e.target;
@@ -56,7 +59,7 @@ const PAGE = {
             if (elementCheck.tagName === 'IMG') {
                 elementCheck = elementCheck.parentElement;
             }
-        
+
             elementCheck.className.indexOf(childClassName) >= 0 && callback(e);
 
         })
@@ -80,10 +83,16 @@ const PAGE = {
         let zIndex = ++PAGE.data.zIndex;
         let backgroundColors = PAGE.data.backgroundColors;
         let backgroundColor = backgroundColors[zIndex % backgroundColors.length];
-        
+
         let cardItem = document.createElement('div');
         cardItem.setAttribute('class', 'card-item');
         cardItem.innerHTML = `
+        <div class="message-bg-left">
+            <img src="image/message_bg_left.png" alt="">
+        </div>
+        <div class="message-bg-right">
+            <img src="image/message_bg_right.png" alt="">
+        </div>
         <p class="card-item-name">小兔兔说：</p>
         <p class="card-item-text">${content}</p>
         <div class="close-icon">
@@ -99,6 +108,100 @@ const PAGE = {
         cardItem.setAttribute('style', styleStr);
         cardList.appendChild(cardItem);
     },
+
+    sendCard: function (e) {
+        let value = this.value.trim();
+        let key = e.which;
+        if (key !== 13 || !value) {
+            return;
+        };
+        let cardItem = document.createElement('div');
+        cardItem.setAttribute('class', 'card-item');
+        cardItem.innerHTML = `
+        <div class="message-bg-left">
+            <img src="image/message_bg_left.png" alt="">
+        </div>
+        <div class="message-bg-right">
+            <img src="image/message_bg_right.png" alt="">
+        </div>
+        <p class="card-item-name">小兔兔说：</p>
+        <p class="card-item-text">${value}</p>
+        <div class="close-icon">
+            <img src="./image/close.png" alt="">
+        </div>
+    `;
+
+        let cardList = document.getElementById('card-list');
+        let zIndex = ++PAGE.data.zIndex;
+        let backgroundColors = PAGE.data.backgroundColors;
+        let backgroundColor = backgroundColors[zIndex % backgroundColors.length];
+        let containerWidth = cardList.offsetWidth;
+        let containerHeight = cardList.offsetHeight;
+        let itemWidth = PAGE.data.itemWidth;
+        let itemHeight = PAGE.data.itemHeight;
+        let paddingOffset = PAGE.data.paddingOffset;
+        let maxWidth = containerWidth - itemWidth - paddingOffset;
+        let maxHeight = containerHeight - itemHeight - paddingOffset;
+        let randomTop = PAGE.randomBetween(paddingOffset, maxHeight);
+        let randomLeft = PAGE.randomBetween(paddingOffset, maxWidth);
+
+        let styleStr = `
+            z-index:${zIndex};
+            background:${backgroundColor};
+            top:${randomTop}px;
+            left:${randomLeft}px;`;
+        cardItem.setAttribute('style', styleStr);
+        cardList.appendChild(cardItem);
+        this.value = '';
+    },
+
+    sendCardBtn: function (e) {
+        let input = document.getElementById('input');
+        let value = input.value;
+        if (!value) {
+            return;
+        };
+        let cardItem = document.createElement('div');
+        cardItem.setAttribute('class', 'card-item');
+        cardItem.innerHTML = `
+        <div class="message-bg-left">
+            <img src="image/message_bg_left.png" alt="">
+        </div>
+        <div class="message-bg-right">
+            <img src="image/message_bg_right.png" alt="">
+        </div>
+        <p class="card-item-name">小兔兔说：</p>
+        <p class="card-item-text">${value}</p>
+        <div class="close-icon">
+            <img src="./image/close.png" alt="">
+        </div>
+    `;
+
+        let cardList = document.getElementById('card-list');
+        let zIndex = ++PAGE.data.zIndex;
+        let backgroundColors = PAGE.data.backgroundColors;
+        let backgroundColor = backgroundColors[zIndex % backgroundColors.length];
+        let containerWidth = cardList.offsetWidth;
+        let containerHeight = cardList.offsetHeight;
+        let itemWidth = PAGE.data.itemWidth;
+        let itemHeight = PAGE.data.itemHeight;
+        let paddingOffset = PAGE.data.paddingOffset;
+        let maxWidth = containerWidth - itemWidth - paddingOffset;
+        let maxHeight = containerHeight - itemHeight - paddingOffset;
+        let randomTop = PAGE.randomBetween(paddingOffset, maxHeight);
+        let randomLeft = PAGE.randomBetween(paddingOffset, maxWidth);
+
+        let styleStr = `
+            z-index:${zIndex};
+            background:${backgroundColor};
+            top:${randomTop}px;
+            left:${randomLeft}px;`;
+        cardItem.setAttribute('style', styleStr);
+        cardList.appendChild(cardItem);
+        this.value = '';
+    },
+
+
 
     randomBetween: function (min, max) {
         return Math.floor(Math.random() * (max - min) + min);
