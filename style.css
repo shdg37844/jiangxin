@@ -1,0 +1,444 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html,
+body {
+    min-width: 1920px;
+    font-family: FZLTHJW--GB1-0;
+}
+
+/* header部分---------------------------------------------------------------------- */
+.page-body {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: 1920px;
+    margin: 0 auto;
+    background: url(../jiangxin/image/banner-bg.jpg);
+    background-size: 1920px 668px;
+    background-repeat: no-repeat;
+    background-color: #F7F7F7;
+}
+
+.jk-logo {
+    position: absolute;
+    top: 20px;
+    left: 460px;
+    font-size: 0;
+}
+
+.page-header {
+    display: flex;
+    align-items: center;
+    height: 546px;
+}
+
+.banner-pic {
+    margin-top: 90px;
+    font-size: 0;
+
+}
+
+.mainer-border {
+    font-size: 0;
+}
+
+.page-mainer {
+    max-width: 1000px;
+    margin: 0 auto;
+    border: 6px solid #E2E2E2;
+}
+
+.mainer-top {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-bottom: 90px;
+    background-color: #fff;
+}
+
+.activity-pic {
+    position: absolute;
+    top: 25px;
+    left: 20px;
+    font-size: 0;
+}
+
+.title {
+    margin-bottom: 31px;
+    margin-top: 92px;
+    font-size: 30px;
+    line-height: 29px;
+    font-weight: normal;
+}
+
+.mainer-top-content {
+    margin: 0 98px;
+}
+
+.mainer-top-text {
+    text-align: center;
+    width: 792px;
+    font-size: 16px;
+    line-height: 21.5px;
+    letter-spacing: -0.5px;
+}
+
+.mainer-content {
+    background-color: #F7F7F7;
+}
+
+.course-intro {
+    position: relative;
+    margin-left: 20px;
+}
+
+.course-intro-left {
+    display: flex;
+    gap: 16px;
+    padding-top: 19px;
+
+}
+
+.course-intro-left.two {
+    padding-top: 31px;
+}
+
+.course-intro-left-pic {
+    font-size: 0;
+}
+
+.course-intro-left p {
+    font-size: 16px;
+    line-height: 23.5px;
+    width: 512px;
+    letter-spacing: -0.5px;
+    padding-top: 48px;
+}
+
+.course-intro-right {
+    position: absolute;
+    top: 27px;
+    right: 60px;
+    font-size: 0;
+}
+
+.course-intro-right-two {
+    position: absolute;
+    top: -9px;
+    right: 6px;
+    font-size: 0;
+}
+
+.module {
+    margin-left: 27px;
+    margin-top: 39px;
+}
+
+.module.margin40 {
+    margin-top: 40px;
+}
+
+/* .module.margin40.last {
+    padding-bottom: 74px;
+} */
+
+.module-top {
+    display: flex;
+    gap: 26px;
+    margin-left: 2px;
+    align-items: end;
+    padding-bottom: 20px;
+}
+
+.module-top-logo {
+    margin-left: 1px;
+    font-size: 0;
+}
+
+.module-top-text {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.module-top-text-1 {
+    margin-left: 1px;
+    font-size: 22px;
+    line-height: 21px;
+}
+
+.module-top-text-2 {
+    font-size: 16px;
+    line-height: 17px;
+}
+
+.module-list {
+    display: flex;
+    gap: 30px;
+}
+
+.module-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 290px;
+    height: 212px;
+    background: rgba(207, 0, 13, 0);
+    border: 1px solid #E6E6E6;
+}
+
+.module-item-avatar {
+    padding-top: 13px;
+    font-size: 0;
+}
+
+.module-item-name {
+    height: 17px;
+    font-size: 18px;
+    margin-top: 21px;
+    margin-bottom: 10px;
+}
+
+.module-item-intro {
+    width: 263px;
+    font-size: 14px;
+    line-height: 18px;
+    letter-spacing: -0.5px;
+}
+
+.more {
+    display: flex;
+    justify-content: end;
+    padding-top: 21px;
+    padding-bottom: 22px;
+    padding-right: 30px;
+
+}
+
+.more span {
+    display: inline-block;
+    width: 182px;
+    font-size: 14px;
+    line-height: 15.5px;
+    text-align: right;
+    color: #666666;
+}
+
+
+
+
+
+
+
+
+
+.module-item.pic {
+    font-size: 0;
+    border: 1px solid #E6E6E6;
+}
+
+.arrow {
+    text-align: center;
+    padding-top: 42px;
+    font-size: 0;
+}
+
+.prize {
+    position: relative;
+    background-color: #fff;
+
+}
+
+.prize-box {
+    padding-top: 37px;
+    padding-left: 96px;
+}
+
+.prize h1 {
+    font-weight: normal;
+    font-size: 30px;
+    line-height: 30px;
+    padding-left: 232px;
+}
+
+.prize-logo {
+    position: absolute;
+    top: 15px;
+    left: 20px;
+    font-size: 0;
+}
+
+.prize-content {
+    display: flex;
+    gap: 37px;
+    margin-top: 15px;
+    margin-bottom: 13px;
+}
+
+.prize-text {
+    max-width: 351px;
+    padding: 12px;
+}
+
+.prize-text-1 {
+    font-size: 14px;
+    line-height: 23.5px;
+    text-decoration: underline;
+}
+
+.prize-text-2 {
+    margin-top: 22px;
+    font-size: 12px;
+    line-height: 12px;
+}
+
+.prize-text-3 {
+    display: flex;
+    margin-top: 8px;
+    font-size: 12px;
+    max-width: 347px;
+}
+
+.prize-text-3-rule {
+    width:60px;
+    
+}
+
+.prize-text-3-text {
+    display: flex;
+    flex-direction: column;
+    gap:10px;
+    width:265px;
+    line-height: 14px;
+}
+
+.prize-text-3-text span {
+    display: inline-block;
+}
+
+.prize-pics {
+    display: flex;
+    gap: 21px;
+}
+
+.prize-pic {
+    font-size: 0;
+    border: 1px dotted #E6E6E6;
+}
+
+.sign {
+    padding-left: 400px;
+    height: 15px;
+    font-size: 16px;
+}
+
+.sendbless {
+    display: flex;
+    align-items: start;
+    margin-top: 26px;
+    margin-bottom: 50px;
+    font-size: 0;
+}
+
+.sendbless-input {
+    width: 650px;
+    height: 86px;
+    background: rgba(101, 177, 217, 0);
+    border: 1px solid #DBDBDB;
+    outline: none;
+}
+
+.sendbless-input::placeholder {
+    height: 15px;
+    font-size: 16px;
+    color: #000000;
+}
+
+.sendbless-btn {
+    padding: 23px 44px;
+    border: 1px solid #DBDBDB;
+}
+
+.sendbless-btn span {
+    display: inline-block;
+    width: 63px;
+    line-height: 19px;
+    color: #666666;
+
+}
+
+
+
+
+
+
+
+
+
+
+/* 留言板部分---------------------------------------------------------------------------------- */
+.card-list-contaienr {
+    position: relative;
+    width: 1000px;
+    height: 574px;
+    overflow: hidden;
+}
+
+.card-item {
+    position: absolute;
+    width: 320px;
+    height: 158px;
+    padding: 20px 17px;
+    background: #F0F5FF;
+}
+
+.close-icon {
+    position: absolute;
+    top: -26px;
+    right: 0px;
+    font-size: 0;
+    display: none;
+    cursor: pointer;
+}
+
+.card-item:hover .close-icon {
+    display: inline-block;
+}
+
+.card-item-name {
+    height: 15px;
+    font-size: 16px;
+    margin-bottom: 11px;
+}
+
+.card-item-text {
+    font-size: 14px;
+    line-height: 22.5px;
+}
+
+
+
+
+/* footer部分----------------------------------------------------------- */
+.page-footer {
+    margin-top: 49px;
+    margin-bottom: 47px;
+}
+
+.footer-text-1 {
+    text-align: center;
+    height: 17px;
+    font-size: 16px;
+}
+
+.footer-text-2 {
+    margin-top: 8px;
+    height: 13px;
+    font-size: 12px;
+}
