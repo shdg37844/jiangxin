@@ -215,7 +215,7 @@ const PAGE = {
     },
 
     handleMouseDown: function (e) {
-        let item = e.target;
+        let item = e.target.closest('.card-item');
         item.style.zIndex = ++PAGE.data.zIndex;
         PAGE.data.itemOffsetTop = item.offsetTop;
         PAGE.data.itemOffsetLeft = item.offsetLeft;
@@ -227,7 +227,6 @@ const PAGE = {
 
     handleMouseMove: function (e) {
         if (!PAGE.data.isLock) {
-
             let cardList = document.getElementById('card-list');
             let containerWidth = cardList.offsetWidth;
             let containerHeight = cardList.offsetHeight;
